@@ -1,160 +1,242 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>Textbook Gallery></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <header>
 
-        <div class="heading_logo">
+    <header>
+        <dev class="container">
             <h1><strong>📚Textbook Gallery📚</strong></h1>
             <nav class="top-nav">
                 <a href="#introduction" class="active">Gallery</a>
-                <a href="#">About</a>
+                <a href="#about">About</a>
             </nav>
-        </div>
+
+        </dev>
 
     </header>
 
     <main>
-        <div class="introduction">
-            <h2>Textbook Gallery</h2>
-            <p class="subtitle">Hover or tab over a book to reveal "See More".</p>
+
+        <div class="container gallery-container">
+
+            <!--Introduction Section-->
+            <div class="introduction" id="intro">
+                <h2>Textbook Gallery</h2>
+                <p class="subtitle">Welcome to Library. Hover or tab over a book to reveal "See More".</p>
+            </div>
+
+            <!--Book Gallery Section -->
+            <div class="row">
+
+                <!-- Book Card 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/0.jpg" alt="Basics of Web Design Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book1.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">Basics of Web Design</h4>
+                            <p class="book-author">Felke-Morris</p>
+                            <p class="book-classification">Web Design</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/1.jpg" alt="E-commerce 2013 Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book2.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">E-commerce 2013</h4>
+                            <p class="book-author">Laudon • Traver</p>
+                            <p class="book-classification">Business. Tech . Society</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/2.jpg" alt="Curious Writer Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book3.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">The Curious Writer</h4>
+                            <p class="book-author">Bruce Ballenger</p>
+                            <p class="book-classification">Creative Writting</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/3.jpg" alt="Global Marketing Mgt Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book4.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">Global Marketing Management</h4>
+                            <p class="book-author">Warren Keegan</p>
+                            <p class="book-classification">Marketing</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 5 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/4.jpg" alt="The Economic Way of Thinking" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book4.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">The Economic Way of Thinking</h4>
+                            <p class="book-author">Heyne • Boettke • Prychitko</p>
+                            <p class="book-classification">Economics</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 6 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/5.jpg" alt="Datbase Processing Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book5.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">Database Processing</h4>
+                            <p class="book-author">Kroenke • Auer</p>
+                            <p class="book-classification">Database</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 7 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/6.jpg" alt="C++ Early Objects Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book6.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">C++ Early Objects</h4>
+                            <p class="book-author">Gaddis • Walters • Muganda</p>
+                            <p class="book-classification">Coding</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Book Card 8 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="book-card">
+
+                        <div class="image-wrapper">
+                            <img src="./img/7.jpg" alt="Intro to Engine Analysis Book Cover" class="book-image">
+                            <div class="overlay">
+                                <a href="./html/book7.html" class="see-more-button">See More →</a>
+                            </div>
+                        </div>
+
+                        <div class="book-info">
+                            <h4 class="book-title">Intro to Engine Analysis</h4>
+                            <p class="book-author">Kirk Hagen</p>
+                            <p class="book-classification">Engineering</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> <!-- End of Row -->
+
+        </div> <!-- End of Gallery Container -->
+
+        <!-- About Section -->
+        <div class="container about">
+            <section id="about" class="about-section">
+                <h3>About this site</h3>
+
+                <div class="about-card">
+                    <p> This CMPT 272 assignment 1 shows a CSS-only overlay button (hover + keyboard focus), plus
+                        reduce-motion and dark -mode support. Bootstrap is used only for layout.</p>
+                    <ul>
+                        <li>No JavaScript is used anywhere.</li>
+                        <li>All interactivity is done with HTML and CSS only.</li>
+                        <li>Image are optimized for web delivery.</li>
+                        <li>Semantic HTML5 elements are used throughout.</li>
+                        <li>Accessible focus styles are provided for keyboard users.</li>
+                    </ul>
+                    <br>
+                    <p>Note: This is a fictional textbook gallery created for education purposes only. The textbooks and
+                        authors mentioned are real, but their inclusion
+                        here does not imply endorsement or affiliation with the original publishers or authors. I affirm
+                        that I have read and understood the SFU Academic
+                        Integrity Policy and that this assignment is my own work. No AI tools were used in the creation
+                        of this assignment.</p>
+                    </p>
+                </div>
+            </section>
+
         </div>
 
-        <div class = "gallery-container">
-            
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/0.jpg" alt="Basics of Web Design Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
 
-                <div class="book-info">
-                    <h4 class="book-title">Basics of Web Design</h4>
-                    <p class="book-author">Felke-Morris</p>
-                    <p class="book-classification">Web Design</p>
-                </div>
-            </div>
 
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/1.jpg" alt="E-commerce 2013 Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">E-commerce 2013</h4>
-                    <p class="book-author">Laudon • Traver</p>
-                    <p class="book-classification">Business. Tech . Society</p>
-                </div>
-            </div>
-
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/2.jpg" alt="Curious Writer Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">The Curious Writer</h4>
-                    <p class="book-author">Bruce Ballenger</p>
-                    <p class="book-classification">Creative Writting</p>
-                </div>
-            </div>
-
-             <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/3.jpg" alt="Global Marketing Mgt Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">Global Marketing Management</h4>
-                    <p class="book-author">Warren Keegan</p>
-                    <p class="book-classification">Marketing</p>
-                </div>
-            </div>
-
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/4.jpg" alt="Global Marketing Mgt Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">Global Marketing Management</h4>
-                    <p class="book-author">Warren Keegan</p>
-                    <p class="book-classification">Economics</p>
-                </div>
-            </div>
-
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/5.jpg" alt="Datbase Processing Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">Datbase Processing</h4>
-                    <p class="book-author">Kroenke • Auer</p>
-                    <p class="book-classification">Database</p>
-                </div>
-            </div>
-
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/6.jpg" alt="C++ Early Obj Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">C++ Early Objects</h4>
-                    <p class="book-author">Gaddis • Walters • Muganda</p>
-                    <p class="book-classification">Coding</p>
-                </div>
-            </div>
-
-            <div class="book-card">
-                <div class="image-wrapper">
-                    <img src="./img/7.jpg" alt="Intro Engine analysis Book Cover" class="book-image">
-                    <div class="overlay">
-                        <a href="#" class="see-more-button">See More →</a>
-                    </div>
-                </div>
-
-                <div class="book-info">
-                    <h4 class="book-title">Intro to Engine Analysis</h4>
-                    <p class="book-author">Kirk Hagen</p>
-                    <p class="book-classification">Engineering</p>
-                </div>
-            </div>
-
-        </div>
-        
-
-       
     </main>
 
     <footer>
-        <p>&copy; 2026 Joycely Tsang ASN.1 Information Page</p>
+        <div class="container">
+            <p>&copy; 2026 Joycelyn Tsang ASN.1 Information Page</p>
+        </div>
     </footer>
 </body>
+
 </html>
