@@ -1,14 +1,39 @@
+:root{
+    --primary-color: #f58b28;
+    --secondary-color: #ead4b4;
+    --bg-color: #f5f5f7;      
+    --text-color: #333;
+    --header-bg: rgba(234, 212, 180, 0.85); 
+    --card-bg: #f8f9fa;
+    --border-color: #dddddd;
+    --about-card-bg: rgba(235, 223, 206, 0.85);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --header-bg: rgba(60, 50, 40, 0.9);
+        --card-bg: #1e1e1e;
+        --border-color: #444444;
+        --about-card-bg: rgba(45, 40, 35, 0.9);
+    }
+    img {
+        filter: brightness(0.8) contrast(1.1);
+    }
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f5f7;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
 header,
 footer {
-    background-color: rgba(234, 212, 180, 0.85);
+   background-color: var(--header-bg);
+   color: var(--text-color);
     text-align: center;
     width: 100%;
     margin: 0;
@@ -21,7 +46,7 @@ h1 {
 
 .top-nav a {
     text-decoration: none;
-    color: #5f6368;
+    color: var(--text-color);
     font-weight: 700;
     margin-right: 20px;
     font-weight: 500;
@@ -37,7 +62,7 @@ h1 {
 }
 
 .subtitle {
-    color: #666;
+    color: var(--text-color);
     font-size: 0.95rem;
 }
 
@@ -53,9 +78,17 @@ h1 {
     border-radius: 0px 0px 0px 0px;
 }
 
+.book-info{
+    background-color: var(--card-bg);
+    border: none;
+    margin-left: 10px;
+}
+
 .book-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     margin-bottom: 30px;
-    background: #fff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -107,7 +140,8 @@ h1 {
 
 }
 
-.image-wrapper:hover .overlay {
+.image-wrapper:hover .overlay,
+.image-wrapper:focus-within .overlay {
     opacity: 1;
 }
 
@@ -115,7 +149,7 @@ h1 {
     transform: scale(1.07);
 }
 
-.image-wrapper:hover .see-more-btn {
+.image-wrapper:hover .see-more-btn, .image-wrapper:focus-within .see-more-button {
     transform: translateY(0);
 }
 
@@ -131,7 +165,7 @@ h1 {
     font-weight: bold;
     font-size: 1.07rem;
     margin-bottom: 1px;
-    color: #111;
+    color: var(--text-color);
 }
 
 .about-section h3 {
@@ -142,10 +176,9 @@ h1 {
 }
 
 .about-card {
-    background-color: rgba(235, 223, 206, 0.85);
-    border: 1px solid #e9ecef;
+   background-color: var(--about-card-bg); 
+    border: 1px solid var(--border-color); 
     margin-bottom: 25px;
-    padding-left: 20px;
 }
 
 .about-card li {
@@ -155,13 +188,14 @@ h1 {
 .back-btn {
     display: inline-block;
     text-decoration: none;
-    color: #333;
-    background-color: #f5f5f7;
-    border: 1px solid #ddd;
+    margin-top: 30px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+
     padding: 8px 20px;
     border-radius: 50px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-top: 20px;
 
     font-weight: 600;
     font-size: 0.9rem;
@@ -177,7 +211,9 @@ h1 {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     font-size: 1.1rem;
+    align-items: center;
 }
 
 .book-detail-image {
@@ -195,18 +231,24 @@ h1 {
 }
 
 .book-detail-content {
-    background-color: rgba(235, 223, 206, 0.85);
+    background-color: var(--about-card-bg); 
+    color: var(--text-color);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
+}
+
+.content-wrapper {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .table-row {
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed var(--border-color);
 
 }
 
@@ -216,14 +258,15 @@ h1 {
 
 .label {
     font-weight: bold;
-    color: #555;
+    color: var(--text-color);
+    opacity: 0.8;
     flex: 1;
 }
 
 .value {
     flex: 2;
-    color: #333;
-}
+    color: var(--text-color);
+} 
 
 
 @media(max-width: 992px) {
@@ -241,5 +284,27 @@ h1 {
         width: 100%;
         padding-bottom: 15px;
         border-radius: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+    .image-wrapper:hover img {
+        transform: none !important;
+    }
+
+    .see-more-button {
+        transform: none !important; 
+        transition: none !important;
+    }
+
+    .book-card:hover {
+        transform: none !important;
     }
 }
